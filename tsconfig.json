@@ -16,13 +16,14 @@
     "isolatedModules": true,
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
+    "plugins": [{ "name": "next" }],
     "paths": {
-      "@/*": "./*",
+      "@/*": ["./*"],
       "@/components/*": ["./app/components/*"],
       "@/lib/*": ["./lib/*"],
       "@/types/*": ["./types/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", ".next/types/**/*.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
 }
